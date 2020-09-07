@@ -11,7 +11,7 @@ class XylophoneApp extends StatelessWidget {
         backgroundColor: Colors.black,
         body: SafeArea(
           child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 buildKey(Colors.red, 'note1.wav'),
                 buildKey(Colors.orange, 'note2.wav'),
@@ -34,7 +34,7 @@ class XylophoneApp extends StatelessWidget {
   Expanded buildKey(Color color, String sound) {
     return Expanded(
       child: FlatButton(
-        child: SizedBox.expand(),
+        child: null,
         onPressed: () {
           playSound(sound);
         },
